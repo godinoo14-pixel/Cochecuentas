@@ -13,4 +13,8 @@ jobs:
           ls -la d.zip
           unzip -l d.zip | head -20
           unzip -o -q d.zip -d d
-          for f in d/*; do echo "== $f"; ls -la "$f"; head -c 600 "$f" | cat -v; echo; wc -l "$f"; done
+          F=d/export_distintivo_ambiental.txt
+          echo "== codigos"; tail -n +2 $F | cut -d'|' -f2 | sort | uniq -c | sort -rn
+          echo "== formatos de matricula"; tail -n +2 $F | cut -d'|' -f1 | sed -E 's/[0-9]/9/g; s/[A-Z]/A/g' | sort | uniq -c | sort -rn | head -15
+          echo "== ejemplos no modernos"; tail -n +2 $F | cut -d'|' -f1 | grep -vE '^[0-9]{4}[A-Z]{3}$' | shuf -n 15 --random-source=$F
+          echo "== duplicados"; tail -n +2 $F | cut -d'|' -f1 | sort | uniq -d | wc -l
