@@ -1,0 +1,39 @@
+name: Publicar web con datos de la DGT
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '41 9 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Descargar fichero de distintivos de la DGT y generar datos
+        run: |
+          curl -sSL --retry 3 --max-time 600 -o d.zip https://www.dgt.es/microdatos/salida/distintivoAmbiental/export_dist_ambiental.zip
+          unzip -o -q d.zip -d d
+          mkdir -p _site
+          rsync -a --exclude .git --exclude .github --exclude d --exclude d.zip --exclude _site ./ _site/
+          python3 .github/dgt/build.py d/export_distintivo_ambiental.txt _site/dgt
+          du -sh _site/dgt; ls _site/dgt/m | wc -l; ls _site/dgt/o | wc -l
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.d.outputs.page_url }}
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4
