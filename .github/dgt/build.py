@@ -33,3 +33,14 @@ for k, lst in old.items():
     lst.sort(); open(f"{out}/o/{k}.txt", 'w').write('\n'.join(lst) + '\n')
 open(f"{out}/fecha.txt", 'w').write(datetime.date.today().strftime('%d/%m/%Y'))
 print('matriculas', n_ok, 'descartadas', n_skip, 'series', len(modern), 'grupos', len(old))
+
+# Última serie de matrícula registrada (la serie de letras más alta con vehículos en el fichero)
+L = 'BCDFGHJKLMNPRSTVWXYZ'
+ix = lambda k: L.index(k[0]) * 400 + L.index(k[1]) * 20 + L.index(k[2])
+ok = [k for k in modern if all(c in L for c in k)]
+if ok:
+    top = max(ok, key=ix); b = modern[top]
+    nums = [n for n in range(10000) if ((b[n >> 1] >> 4) if n & 1 else (b[n >> 1] & 15))]
+    import json as _j
+    _j.dump({"serie": top, "numero": max(nums) if nums else None, "fecha": datetime.date.today().strftime('%d/%m/%Y')}, open(f"{out}/ultima.json", 'w'))
+    print('ultima serie', top, max(nums) if nums else None)

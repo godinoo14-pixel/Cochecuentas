@@ -4,6 +4,7 @@ on:
     branches: [main]
   schedule:
     - cron: '41 9 * * *'
+    - cron: '41 16 * * *'
   workflow_dispatch:
 permissions:
   contents: read
@@ -24,6 +25,7 @@ jobs:
           mkdir -p _site
           rsync -a --exclude .git --exclude .github --exclude d --exclude d.zip --exclude _site ./ _site/
           python3 .github/dgt/build.py d/export_distintivo_ambiental.txt _site/dgt
+          python3 .github/carb/build.py _site/carb || echo 'AVISO: no se pudieron actualizar los carburantes'
           du -sh _site/dgt; ls _site/dgt/m | wc -l; ls _site/dgt/o | wc -l
       - uses: actions/upload-pages-artifact@v3
         with:
