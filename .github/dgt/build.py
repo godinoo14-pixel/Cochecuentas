@@ -1,9 +1,9 @@
 """Convierte el fichero abierto de distintivos de la DGT en ficheros pequeños consultables desde la web.
-m/XXX.bin : matrículas 9999XXX, 4 bits por número (5000 bytes). 0=no existe 1=B 2=C 3=ECO 4=0 5=sin distintivo
+m/XXX.bin : matrículas 9999XXX, 4 bits por número (5000 bytes). 0=no existe 1=B 2=C 3=ECO 4=0 (turismos y resto) 5=sin distintivo 6=B 7=C 8=ECO 9=0 (motos)
 o/PPDD.txt: resto de formatos, una línea "resto:código" por matrícula, agrupadas por letras iniciales + 2 primeras cifras."""
 import sys, os, re, collections, datetime
 src, out = sys.argv[1], sys.argv[2]
-CODE = {'16TB': 1, '16MB': 1, '16TC': 2, '16MC': 2, '16TE': 3, '16ME': 3, '16T0': 4, '16M0': 4, 'SIN DISTINTIVO': 5}
+CODE = {'16TB': 1, '16TC': 2, '16TE': 3, '16T0': 4, 'SIN DISTINTIVO': 5, '16MB': 6, '16MC': 7, '16ME': 8, '16M0': 9}
 modern = collections.defaultdict(lambda: bytearray(5000))
 old = collections.defaultdict(list)
 rm = re.compile(r'^(\d{4})([A-Z]{3})$'); ro = re.compile(r'^([A-Z]{1,2})(\d{3,})([A-Z]*)$')
