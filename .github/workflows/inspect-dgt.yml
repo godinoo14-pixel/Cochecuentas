@@ -1,0 +1,16 @@
+name: Inspeccionar fichero DGT
+on:
+  push:
+    paths: ['.github/workflows/inspect-dgt.yml']
+  workflow_dispatch:
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar y mirar
+        run: |
+          curl -sSL -o d.zip https://www.dgt.es/microdatos/salida/distintivoAmbiental/export_dist_ambiental.zip
+          ls -la d.zip
+          unzip -l d.zip | head -20
+          unzip -o -q d.zip -d d
+          for f in d/*; do echo "== $f"; ls -la "$f"; head -c 600 "$f" | cat -v; echo; wc -l "$f"; done
