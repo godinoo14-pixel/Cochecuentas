@@ -9,6 +9,7 @@ on:
 permissions:
   contents: read
   pages: write
+  actions: read
   id-token: write
 concurrency:
   group: pages
@@ -27,6 +28,16 @@ jobs:
           python3 .github/dgt/build.py d/export_distintivo_ambiental.txt _site/dgt
           python3 .github/carb/build.py _site/carb || echo 'AVISO: no se pudieron actualizar los carburantes'
           du -sh _site/dgt; ls _site/dgt/m | wc -l; ls _site/dgt/o | wc -l
+      - name: Esperar a que termine la publicación automática de la rama
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 30); do
+            n=$(gh api repos/${{ github.repository }}/actions/runs?head_sha=${{ github.sha }} --jq '[.workflow_runs[]|select(.name=="pages build and deployment" and .status!="completed")]|length' || echo 0)
+            [ "$n" = "0" ] && [ $i -gt 3 ] && break
+            sleep 10
+          done
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
