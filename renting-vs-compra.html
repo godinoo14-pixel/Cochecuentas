@@ -26,6 +26,7 @@ function show(id,h){const r=document.getElementById(id);r.innerHTML=h;r.style.di
 (function(){let s=null;try{s=localStorage.getItem('ck')}catch(e){}const b=document.getElementById('ck');if(!s)b.style.display='block';
 function set(x){try{localStorage.setItem('ck',x)}catch(e){}b.style.display='none';}
 document.getElementById('cka').onclick=()=>set('1');document.getElementById('ckr').onclick=()=>set('0');})();
+(function(){try{if(localStorage.getItem('nocount'))return;}catch(e){}var d=new Date(),k=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');var h=function(x){try{fetch('https://abacus.jasoncameron.dev/hit/cochecuentas.es/'+x).catch(function(){});}catch(e){}};h('total');h('d-'+k);h('p-renting-vs-compra');try{if(localStorage.getItem('ck')==='1'&&localStorage.getItem('uv')!==k){localStorage.setItem('uv',k);h('u-'+k);}}catch(e){}})();
 
 function calc(){const n=v('n'),c=v('pc'),rev=c*v('vr')/100,buy=c-rev+(v('sg')+v('mt')+v('im'))*n,ren=v('cr')*12*n+v('en'),d=buy-ren;
 show('r',(d>0?'Sale más barato el <b>renting</b>':'Sale más barato <b>comprar</b>')+':<b class="big">'+eur(Math.abs(d))+' de diferencia</b>Coste total compra: '+eur(buy)+' ('+eur(buy/n/12)+'/mes) · Coste total renting: '+eur(ren)+' ('+eur(ren/n/12)+'/mes)');}

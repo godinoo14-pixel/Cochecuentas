@@ -28,6 +28,7 @@ function show(id,h){const r=document.getElementById(id);r.innerHTML=h;r.style.di
 (function(){let s=null;try{s=localStorage.getItem('ck')}catch(e){}const b=document.getElementById('ck');if(!s)b.style.display='block';
 function set(x){try{localStorage.setItem('ck',x)}catch(e){}b.style.display='none';}
 document.getElementById('cka').onclick=()=>set('1');document.getElementById('ckr').onclick=()=>set('0');})();
+(function(){try{if(localStorage.getItem('nocount'))return;}catch(e){}var d=new Date(),k=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');var h=function(x){try{fetch('https://abacus.jasoncameron.dev/hit/cochecuentas.es/'+x).catch(function(){});}catch(e){}};h('total');h('d-'+k);h('p-historial-coche-matricula');try{if(localStorage.getItem('ck')==='1'&&localStorage.getItem('uv')!==k){localStorage.setItem('uv',k);h('u-'+k);}}catch(e){}})();
 
 const LET='BCDFGHJKLMNPRSTVWXYZ';
 const K=[['BBB',2000+8.5/12],['BDR',2001],['BRT',2002],['CDC',2003],['CRC',2004],['DFF',2005],['DVB',2006],['FKC',2007],['FYY',2008],['GKH',2009],['GSR',2010],['HBG',2011],['HHT',2012],['HNK',2013],['HVF',2014],['JBY',2015],['JKZ',2016],['JVZ',2017],['KGN',2018],['KSS',2019],['LDR',2020],['LMC',2021],['LVV',2022],['MDF',2023],['MMN',2024],['MXP',2025],['NJS',2026],['NRY',2026+8/12]];

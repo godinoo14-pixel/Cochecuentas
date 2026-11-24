@@ -26,6 +26,7 @@ function show(id,h){const r=document.getElementById(id);r.innerHTML=h;r.style.di
 (function(){let s=null;try{s=localStorage.getItem('ck')}catch(e){}const b=document.getElementById('ck');if(!s)b.style.display='block';
 function set(x){try{localStorage.setItem('ck',x)}catch(e){}b.style.display='none';}
 document.getElementById('cka').onclick=()=>set('1');document.getElementById('ckr').onclick=()=>set('0');})();
+(function(){try{if(localStorage.getItem('nocount'))return;}catch(e){}var d=new Date(),k=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');var h=function(x){try{fetch('https://abacus.jasoncameron.dev/hit/cochecuentas.es/'+x).catch(function(){});}catch(e){}};h('total');h('d-'+k);h('p-depreciacion-coche');try{if(localStorage.getItem('ck')==='1'&&localStorage.getItem('uv')!==k){localStorage.setItem('uv',k);h('u-'+k);}}catch(e){}})();
 
 function calc(){let x=v('pv');const n=Math.round(v('n')),a=v('r1')/100,b=v('r2')/100;let h='<table><tr><th>Año</th><th>Valor</th><th>Pierde</th></tr>';
 for(let i=1;i<=n;i++){const p=x*(i==1?a:b);x-=p;h+='<tr><td>'+i+'</td><td>'+eur(x)+'</td><td>'+eur(p)+'</td></tr>';}

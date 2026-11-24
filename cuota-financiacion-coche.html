@@ -26,6 +26,7 @@ function show(id,h){const r=document.getElementById(id);r.innerHTML=h;r.style.di
 (function(){let s=null;try{s=localStorage.getItem('ck')}catch(e){}const b=document.getElementById('ck');if(!s)b.style.display='block';
 function set(x){try{localStorage.setItem('ck',x)}catch(e){}b.style.display='none';}
 document.getElementById('cka').onclick=()=>set('1');document.getElementById('ckr').onclick=()=>set('0');})();
+(function(){try{if(localStorage.getItem('nocount'))return;}catch(e){}var d=new Date(),k=d.getFullYear()+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0');var h=function(x){try{fetch('https://abacus.jasoncameron.dev/hit/cochecuentas.es/'+x).catch(function(){});}catch(e){}};h('total');h('d-'+k);h('p-cuota-financiacion-coche');try{if(localStorage.getItem('ck')==='1'&&localStorage.getItem('uv')!==k){localStorage.setItem('uv',k);h('u-'+k);}}catch(e){}})();
 
 function calc(){const cap=v('p')-v('e'),i=v('t')/100/12,n=Math.max(1,Math.round(v('m'))),fv=v('vf'),com=cap*v('ca')/100;
 const q=i? (cap-fv/Math.pow(1+i,n))*i/(1-Math.pow(1+i,-n)) : (cap-fv)/n,tot=q*n+fv+com;
