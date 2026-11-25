@@ -1,0 +1,37 @@
+# CocheCuentas
+
+> Consulta cualquier coche por su matrícula (etiqueta DGT, año e ITV), encuentra la gasolinera más barata y calcula coste por km, impuesto de matriculación y financiación. Gratis.
+
+Calculadoras gratuitas en español para España, sin registro. Cada página explica la fórmula, incluye un ejemplo y cita la fuente oficial cuando la hay. Web: https://cochecuentas.es/
+
+## Herramientas
+
+- [Etiqueta DGT por matrícula: consulta qué distintivo tiene tu coche](https://cochecuentas.es/etiqueta-dgt.html): Escribe la matrícula y te decimos al instante la etiqueta medioambiental oficial de tu coche o moto: 0, ECO, C, B o sin etiqueta. Datos oficiales de la DGT actualizados a diario.
+- [Historial de un coche por matrícula gratis: año, etiqueta e ITV](https://cochecuentas.es/historial-coche-matricula.html): Escribe la matrícula y consulta gratis la fecha aproximada de matriculación, la antigüedad, la etiqueta DGT oficial y cuándo le toca la ITV a cualquier coche o moto.
+- [Gasolineras más baratas cerca de mí: precio gasolina y diésel hoy](https://cochecuentas.es/gasolineras-baratas.html): Encuentra las gasolineras más baratas cerca de ti con los precios oficiales de hoy de gasolina 95, diésel, gasolina 98 y GLP en toda España. Cuánto ahorras por depósito.
+- [¿Qué coche me puedo permitir según mi sueldo? Calculadora](https://cochecuentas.es/que-coche-me-puedo-permitir.html): Calcula el precio máximo de coche que puedes pagar con tu sueldo: cuota máxima, entrada, financiación y gastos reales de seguro, gasolina, mantenimiento e impuesto.
+- [Calcular consumo real de un coche (l/100 km) con tus repostajes](https://cochecuentas.es/consumo-real-coche.html): Calcula el consumo real de tu coche en litros cada 100 km con el método del depósito lleno: uno o varios repostajes, coste por km, km por litro y CO2. Compáralo con el WLTP.
+- [Coste por kilómetro de tu coche: calculadora de gasolina y diésel](https://cochecuentas.es/coste-por-km.html): ¿Cuánto te cuesta cada kilómetro? Pon el consumo de tu coche y el precio del litro y verás el gasto en combustible por km, al mes y al año. Gratis y al instante.
+- [Coche eléctrico o gasolina: ¿cuánto ahorro al año y cuándo compensa?](https://cochecuentas.es/electrico-vs-gasolina.html): Calcula cuánto ahorras al año con un coche eléctrico frente a uno de gasolina o diésel, con el precio medio oficial del combustible de hoy, y en cuántos años amortizas la diferencia de precio.
+- [Distancia de frenado: calculadora con lluvia, nieve y hielo](https://cochecuentas.es/distancia-frenado.html): Calcula cuántos metros necesitas para detener el coche según la velocidad, el tiempo de reacción y el firme (seco, mojado, nieve o hielo), y a qué velocidad chocarías si el obstáculo está más cerca.
+- [Calculadora de alcoholemia: tasa de alcohol en aire y sangre](https://cochecuentas.es/calculadora-alcoholemia.html): Estima tu tasa de alcohol en sangre y en aire espirado según lo que has bebido, tu peso y el tiempo pasado, cuánto tardará en bajar y qué multa y puntos supone según la DGT.
+- [Impuesto de matriculación 2026: calculadora por CO2 y comunidad](https://cochecuentas.es/impuesto-matriculacion.html): Calcula el impuesto de matriculación de tu coche nuevo o importado: tramos de CO2 WLTP, tipos de cada comunidad, Canarias, familia numerosa y coches usados de importación.
+- [Impuesto de circulación: calculadora con caballos fiscales (IVTM)](https://cochecuentas.es/impuesto-circulacion.html): Calcula los caballos fiscales de tu coche a partir de la cilindrada o los kW y cuánto pagarás de impuesto de circulación (IVTM): cuota legal mínima y máxima, coeficiente de tu ayuntamiento y bonificaciones.
+- [Multa por exceso de velocidad: calculadora con margen del radar 2026](https://cochecuentas.es/multa-exceso-velocidad.html): Calcula la multa y los puntos por exceso de velocidad según la tabla de la DGT: descuenta el margen de error del radar fijo o móvil y te dice si es grave, muy grave o delito.
+- [Cuánto cuesta mantener un coche al año: calculadora de todos los gastos](https://cochecuentas.es/coste-anual-coche.html): Calcula cuánto cuesta mantener tu coche al año, al mes y por kilómetro: seguro, impuesto de circulación, ITV, revisiones, neumáticos, combustible, parking, financiación y pérdida de valor, con el peso de cada gasto.
+- [Depreciación de un coche: calcula cuánto valdrá dentro de X años](https://cochecuentas.es/depreciacion-coche.html): Calcula cuánto valdrá tu coche dentro de 1, 3 o 5 años y cuánto dinero pierde cada año. Hecha por un tasador profesional: útil para vender, comprar o elegir entre nuevo y seminuevo.
+- [Calcular gasolina de un viaje: coste en coche y por persona](https://cochecuentas.es/coste-viaje-coche.html): Calcula cuánto gastas en gasolina o diésel en un viaje en coche, con el precio medio de hoy del Ministerio, peajes e ida y vuelta, y cuánto paga cada ocupante.
+- [Equivalencia de neumáticos: calculadora de medidas y velocímetro](https://cochecuentas.es/equivalencia-neumaticos.html): ¿Puedo montar otra medida de rueda? Compara dos neumáticos (por ejemplo 205/55 R16 y 225/45 R17): diferencia de diámetro, error del velocímetro y si entra en el ±3 % aceptado.
+- [Renting o comprar coche: ¿qué sale más barato? Calculadora 2026](https://cochecuentas.es/renting-vs-compra.html): Renting o compra: compara el coste total de cada opción en los mismos años, con valor de reventa, seguro, mantenimiento, impuestos y, si financias, los intereses. Te decimos cuál sale más barato y por cuánto.
+- [Calculadora de financiación de coche: cuota, TAE e intereses](https://cochecuentas.es/cuota-financiacion-coche.html): Calcula la cuota mensual al financiar tu coche y su TAE real con comisión de apertura: intereses, coste total y cuota final de la financiación multiopción. Compara ofertas en segundos.
+- [Última matrícula en España: ¿por qué letra van las matrículas hoy?](https://cochecuentas.es/ultima-matricula.html): Consulta por qué letra van las matrículas en España hoy, la última serie asignada según el registro de la DGT, cuántas matrículas se asignan al mes y cuándo llegará la siguiente letra.
+
+## Sobre el sitio
+
+- [Sobre nosotros](https://cochecuentas.es/sobre-nosotros.html)
+- [Aviso legal](https://cochecuentas.es/aviso-legal.html)
+
+## Otras webs de la misma red
+
+- [CalculadoraDías](https://calculadoradias.es/)
+- [GastoLuz](https://gastoluz.es/)
